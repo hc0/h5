@@ -41,7 +41,6 @@
     .notice img{
     	width: 0.8rem;
     	display: inline-block;
-    	border: 1px dashed #cccccc;
     	margin-left: 5rem;
     }
     .buttonDiv {
@@ -57,24 +56,26 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <img src="images/tlt7.png" class="dianya" />
+      <img src="images/tlt7.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="drawing">
+      <div class="drawing animated c1 bounceInLeft delay-300ms">
         <div class="ditu">
           <img class="width100" src="images/ditu7.png">
         </div>
       </div>
-      <div class="buttonDiv">
+      <div class="buttonDiv animated c1 bounceInLeft delay-300ms">
       	<img src="images/leftbutton.png" class="leftImg">
       	<img src="images/rightbutton.png" class="rightImg">
       </div>
-      <div class="notice">
+      <div class="animated c1 bounceInRight delay-500ms">
+        <div class="notice animated c4 flash">
         	<img src="images/xiaoshou.png" />
         	<span>点击按钮查看不同模式</span>
+        </div>
       </div>
-      <div class="title">内燃机工作模式</div>
-      <div class="content">
+      <div class="title animated c1 bounceInLeft delay-1s">内燃机工作模式</div>
+      <div class="content  animated c1 bounceInRight delay-1s">
         <ul class="infor">              
         	<li>由内燃机驱动车辆</li>
         	<li>电机可起到交流发电机的功能</li>

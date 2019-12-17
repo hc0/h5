@@ -40,7 +40,6 @@
     .notice img{
     	width: 0.8rem;
     	display: inline-block;
-    	border: 1px dashed #cccccc;
     	margin-left: 5rem;
     }
     .word{
@@ -79,10 +78,10 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <img src="images/tlt6.png" class="dianya" />
+      <img src="images/tlt6.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="drawing">
+      <div class="drawing animated c1 bounceInLeft delay-300ms">
         <div class="ditu">
           <img class="width100" src="images/ditu6.png" usemap="#redian">
           <map name="#redian">
@@ -101,12 +100,14 @@
           <img src="images/gydcfd.png" class="word word6">
         </div>
       </div>
-      <div class="notice">
+      <div class="animated c1 bounceInLeft delay-300ms">
+        <div class="notice animated c4 flash">
         	<img src="images/xiaoshou.png" />
         	<span>点击元件显示名称</span>
+        </div>
       </div>
-      <div class="title">电力驱动工作模式</div>
-      <div class="content">
+      <div class="title animated c1 bounceInRight delay-500ms">电力驱动工作模式</div>
+      <div class="content animated c1 bounceInLeft delay-1s">
         <ul class="infor">                           
         	<li>由电机驱动汽车</li>
         	<li>内燃机关闭</li>
@@ -132,7 +133,7 @@
         $(".word"+ num).show();
         setTimeout(function(){
          $(".word"+ num).hide(1000);
-        },3000);
+        },2000);
       }
   };
   $(function(){ 
