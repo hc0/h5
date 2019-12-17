@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>无设计稿rem</title>
+  <title>驾驶模式</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
@@ -33,7 +34,7 @@
       width: 100%;
       height: 4rem;
     }
-    .xingshimoshi{
+    #animate{
       position: absolute;
       margin-top: 1.75rem;
       width: 13.5rem;
@@ -44,6 +45,9 @@
     main{
       position: absolute;
       margin: 0.6rem 1.1rem;
+    }
+    .part{
+      padding: 0 1rem;
     }
     .part1 p{
       margin-top: 0.45rem;
@@ -685,9 +689,9 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index7/xingshimoshi.png" class="xingshimoshi" />
+      <image src="images/index7/xingshimoshi.png" id="animate" class="animated c1 fadeInDown" />
     </div>
-    <div>
+    <div class="animated c1 bounceInLeft delay-500ms">
       <div class="part part1">
         <p>
           为使BEV能够移动，LE 会从高压蓄电池中获取所需的电能。 为此，需将获得的直流电转换为交流电并传输至电动机。 根据交流电相应的频率，电动机的转速会发生改变,即频率越高，转速和行驶速度也就越快。
