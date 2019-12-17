@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <link rel="stylesheet" href="css/style.css"></link>
   <style>
-    .dianya{
+    #animate{
       margin-top: 1.5rem
     }
     .drawing{
@@ -53,7 +53,6 @@
     .notice img{
     	width: 0.8rem;
     	display: inline-block;
-    	border: 1px dashed #cccccc;
     	margin-left: 1.6rem;
     }
   </style>
@@ -62,13 +61,13 @@
 <body>
   <div class="outer" style="overflow-y: auto;">
     <div class="imgHeader">
-    	<img src="images/tlt5.png" class="dianya" />
+    	<img src="images/tlt5.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="title">
+      <div class="title animated c1 bounceInLeft delay-300ms">
        先导线路保护机制
       </div>
-      <div class="content">
+      <div class="content animated c1 bounceInLeft delay-500ms">
         <p>搭铁接线是一种避免电击的简单方法。它将高压部件的所有外壳与车身相接。
         	用棕色粗导线进行连接。在出现故障时，部件内可能发生短路并使外壳带电。
         	在本示例中，空调压缩机的外壳处于HV+端的电压下。
@@ -80,7 +79,7 @@
         	故障得到识别，系统切断电源。现在断开搭铁接线，看一下反面示例。为此请点击“搭铁”按钮。
         </p>
       </div>
-      <div class="drawing">
+      <div class="drawing animated c1 bounceInRight delay-1s">
         <div class="ditu">
           <img class="width100" src="images/ditu5.png">
         </div>
@@ -89,7 +88,7 @@
         	<img src="images/gzbutton2.png" class="gzImg" id="gz2"/>
         	<img src="images/dtbutton1.png" class="dtImg" id="dt1"/>
         </div>
-        <div class="notice">
+        <div class="notice animated c5 flash">
         	<img src="images/xiaoshou.png" />
         	<span>点击按钮查看不同状态</span>
         </div>

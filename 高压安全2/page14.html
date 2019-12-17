@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <link rel="stylesheet" href="css/style.css"></link>
   <style>
-    .dianya{
+    #animate{
       margin-top: 1.5rem
     }
     .drawing{
@@ -42,18 +42,18 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-    	<img src="images/tlt4.png" class="dianya" />
+    	<img src="images/tlt4.png" id="animate" class="animated c1 fadeInDown"/>
     </div>
     <main>
-      <div class="title">
+      <div class="title animated c1 bounceInLeft delay-300ms">
        “高压保护”分离插头
       </div>
-      <div class="content" style="margin: 1rem 0;">
+      <div class="content animated c1 bounceInLeft delay-500ms" style="margin: 1rem 0;">
         <p>另一种切断车辆供电的方法是使用分离插头。区分高压和低压分离插头。
         	压分离插头以物理方式断开纵联线路以及两部分蓄电池的高压连接。低压分离插头仅断开纵联线路并促使‘高压保护”开启。
         </p>
       </div>
-      <div class="drawing">
+      <div class="drawing  animated c1 bounceInRight delay-1s">
         <div class="ditu">
           <img class="width100" src="images/ditu4.png">
           <img class="imgTop" src="images/top4.png">
@@ -75,7 +75,7 @@
   $(function(){
     $(".imgTop").show(1000, function(){
       $(".imgTop").addClass('pulse animated infinite');
-      setTimeout(removeClass, 2000);
+      setTimeout(removeClass, 4000);
     });
   });
   function removeClass() {
