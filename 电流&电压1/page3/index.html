@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>无设计稿rem</title>
+  <title>电压</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
@@ -30,13 +30,13 @@
       width: 100%;
       height: 4rem;
     }
-    .dianya{
-      position: absolute;
-      margin-top: 1.75rem;
-      width: 13.5rem;
-      left:50%;
-      margin-left:-6.75rem;
-      height: auto;
+    #animate{
+    position: absolute;
+    margin-top: 1.75rem;
+    width: 13.5rem;
+    left:50%;
+    margin-left:-6.75rem;
+    height: auto;
     }
     main{
       position: absolute;
@@ -145,16 +145,16 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index1/dianya.png" class="dianya" />
+      <image src="images/index1/dianya.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="title">
+      <div class="title animated c1 bounceInLeft delay-300ms">
         电压表示电势差
       </div>
-      <div class="content">
+      <div class="content animated c1 bounceInLeft delay-300ms">
         电势就好比是一个相对于固定参考面的平面。如果将电势比作一栋大楼,以地面为参考平面，则一楼就是零电势。二楼就是比之前更高的一个电势。电压和电势指的谁都是伏特。在下图示例中，电压U示电势2减电势1的结果。因此，电压源始终有两个触点或电极。通常将其称为正极和负极。移动电势的调节滑块并观察对电压的影响。
       </div>
-      <div class="drawing">
+      <div class="drawing  animated c1 bounceInRight delay-1s">
         <img src="images/index1/dianyuan.png" class="dianyuan"/>
         <span class="num num1">0 V</span>
         <span class="num num2">0 V</span>

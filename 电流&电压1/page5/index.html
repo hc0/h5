@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>无设计稿rem</title>
+  <title>欧姆定律</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
@@ -31,7 +32,7 @@
       width: 100%;
       height: 4rem;
     }
-    .oumudinglv{
+    #animate{
       position: absolute;
       margin-top: 1.75rem;
       width: 13.5rem;
@@ -182,17 +183,17 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index3/oumudinglv.png" class="oumudinglv" />
+      <image src="images/index3/oumudinglv.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="title">
+      <div class="title animated c1 bounceInLeft delay-300ms">
         电阻等于电压与电流之比
       </div>
-      <div class="content">
+      <div class="content animated c1 bounceInLeft delay-500ms">
       在上一页我们已经看到，电流随着电压的增大而升高。电流升高的幅度主要取决于一个元件属性，即电阻。也就是说， 元件的导电性能越好，它的电阻越小，流过电流越大。这种成正比例变化的规律，我们称之为欧姆定律。
       电阻的表示符号是Ω，欧姆。该定律是：电阻等于电压与电流之比或R=U/I。
       </div>
-      <div class="drawing">
+      <div class="drawing  animated c1 bounceInRight delay-1s">
         <p class="range range1">
           <span class="dianzuqi">电阻</span>
           <span class="kuai kuai1"><span>
