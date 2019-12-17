@@ -38,11 +38,10 @@
     .notice img{
     	width: 0.8rem;
     	display: inline-block;
-    	border: 1px dashed #cccccc;
-    	margin-left: 5rem;
+    	margin-left: 3rem;
     }
     .lastPic{
-    	width: 12rem;
+    	width: 10rem;
     	margin: 0 auto;
     	display: block;
     }
@@ -51,7 +50,7 @@
       z-index: 9;
       position: absolute;
       padding: 0.1rem;
-      font-size: 0.8rem;
+      font-size: 0.4rem;
       background-color:#F5F5F5;
     }
     .word1{
@@ -92,10 +91,10 @@
 <body>
   <div class="outer" style="overflow-y: auto;">
     <div class="imgHeader">
-      <img src="images/tlt18.png" class="dianya" />
+      <img src="images/tlt18.png"  id="animate" class="animated c1 fadeInDown"/>
     </div>
     <main>
-      <div class="drawing">
+      <div class="drawing animated c1 bounceInLeft delay-300ms">
         <div class="ditu">
           <img class="width100" src="images/ditu18.png" usemap="#redian">
           <map name="#redian">
@@ -117,12 +116,12 @@
           <span class="word word7">驱动轴</span>
           <span class="word word8">驱动轴</span>
         </div>
-      </div>
-      <div class="notice">
-        	<img src="images/xiaoshou.png" />
+        <div class="notice">
+        	<img src="images/xiaoshou.jpg" class="animated infinite flash"/>
         	<span>点击元件显示名称</span>
+        </div>
       </div>
-      <div class="content">
+      <div class="content animated c1 bounceInLeft delay-1s">
       	<p>
                                 电机位于内燃机和变速箱之间，由三相交流电压供电，提供电压的是动力电子电路.</br>
 电机包含一个转子和一个定子.转子内含有永磁体，定子内装有磁性线圈.定子被永久安装在齿轮箱内.                            
@@ -134,7 +133,7 @@
           <li>3.驱动车辆</li>
         </ul>
       </div>
-      <img src="images/pic18.png" class="lastPic">
+      <img src="images/pic18.png" class="lastPic animated c1 bounceInRight delay-1500ms">
     </main>
   </div>
 </body>
@@ -153,7 +152,7 @@
         $(".word"+ num).show();
         setTimeout(function(){
          $(".word"+ num).hide(1000);
-        },3000);
+        },2000);
       }
   };
   $(function(){ 

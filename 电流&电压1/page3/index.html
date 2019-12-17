@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>无设计稿rem</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html,
     body {
       background-color:#93D9F6;
@@ -185,6 +184,7 @@
   }
   getRem();
   $(function(){
+    // 功能滑块
      $(".kuai1").draggable({
       containment: ".range1",
       axis: "x",
@@ -207,6 +207,8 @@
         $(".num3").text(10 - parseInt(ui.position.left / item)  + " V");
       },
     });
+    // 模块飞入
+
   })
 
 </script>

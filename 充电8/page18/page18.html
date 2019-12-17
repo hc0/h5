@@ -36,27 +36,18 @@
     .notice img{
     	width: 0.8rem;
     	display: inline-block;
-    	border: 1px dashed #cccccc;
     	margin-left: 5rem;
     }
     .btnGroup{
-    	margin: 0.8rem 0;
+      margin: 0.8rem 0;
+      text-align: center;
     }
     .btnGroup .button{
-    	width: 33%;
-    	color: #666666;
-        font-size: 0.5rem;
-        height: 1.2rem;
-        line-height: 1.2rem;
-        display: inline-block;
-        background-color: #f5f5f5;
-        border-radius: 0.4rem;
-        border:1px solid rgba(143,143,153,1);
-        text-align: center;
-        margin-left: 1%;
+      display: inline-block;
+      margin: 0 3px;
     }
-    .btnGroup .button:first-child{
-    	width: 26%;
+    .btnGroup .button img{
+    	height: 1rem;
     }
   </style>
 </head>
@@ -64,27 +55,29 @@
 <body>
   <div class="outer" style="overflow-y: auto;">
     <div class="imgHeader">
-      <img src="images/tlt17.png" class="dianya" />
+      <img src="images/tlt17.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="content">
+      <div class="content animated c1 bounceInLeft delay-300ms">
       	高压电池既可以在公共充电站充电，也可以在家中充电.</br>
 家中充电：建议安装家用交流充电站，需由专业人员安装，给汽车充电的最大功率输出可达3.6KW，最大持续电流为16A.</br>
 此外，也可以使用带充电控制器的交流充电电缆.该电缆配有连接家用电源插座的连接器以及一个与车辆适配的充电连接器，可提供最高达2.3KW的供电输出功率。在充电过程中，充电控制器可控制电流不超过10A，这样可以保护插座免于过载。公共充电：除了配有充电控制器的交流充电电缆之外，随车还配备一条有两个插头的交流充电站充电电缆.其中的一个插头用于接插汽车，另一个则接插公共交流充电站.这样最大充电功率就可达到3.6KW.
       </div>
-      <div class="drawing">
+      <div class="drawing animated c1 bounceInRight delay-500ms">
         <div class="ditu">
           <img class="pic" src="images/chong1.png">
         </div>
       </div>
-      <div class="btnGroup">
-      	<span class="button" id="button1">交流充电电缆</span>
-      	<span class="button" id="button2">家用交流充电电站</span>
-      	<span class="button" id="button3">公共交流充电电站</span>
-      </div>
-      <div class="notice">
-        	<img src="images/xiaoshou.png" />
-        	<span>点击切换不同充电示意图</span>
+      <div class="animated c1 bounceInLeft delay-1500ms">
+        <div class="btnGroup">
+          <span class="button" id="button1"><img src="images/bt1.png"></span>
+          <span class="button" id="button2"><img src="images/bt2.png"></span>
+          <span class="button" id="button3"><img src="images/bt3.png"></span>
+        </div>
+        <div class="notice">
+            <img src="images/xiaoshou.png" class="animated infinite flash" />
+            <span>点击切换不同充电示意图</span>
+        </div>
       </div>
     </main>
   </div>
