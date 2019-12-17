@@ -3579,6 +3579,22 @@
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
 }
+.animated.c4 {
+  -webkit-animation-iteration-count: 4;
+  animation-iteration-count: 4;
+}
+.animated.c5 {
+  -webkit-animation-iteration-count: 5;
+  animation-iteration-count: 5;
+}
+.animated.c6 {
+  -webkit-animation-iteration-count: 6;
+  animation-iteration-count: 6;
+}
+.animated.c7 {
+  -webkit-animation-iteration-count: 7;
+  animation-iteration-count: 7;
+}
 .animated.delay-100ms {
   -webkit-animation-delay: 100ms;
   animation-delay: 100ms;
