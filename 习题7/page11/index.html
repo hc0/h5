@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>无设计稿rem</title>
+  <title>任务：组件归类</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html,
     body {
       background-color:#93D9F6;
@@ -33,7 +33,7 @@
       width: 100%;
       height: 4rem;
     }
-    .renwu{
+    #animate{
       position: absolute;
       margin-top: 1.75rem;
       width: 13.5rem;
@@ -49,7 +49,7 @@
     .imgPart{
       width: 100%;
       margin: 0.5rem auto;
-      height: 2.6rem;
+      /* height: 2.6rem; */
       border:1px solid #eee;
     }
     .imgPart span{
@@ -73,22 +73,24 @@
        width: 2.8rem;
     }
     .tishi2{
-      position: absolute;
-      width:9.6rem;
-      top:4.5rem;
-      left:4rem;
+      /* position: absolute; */
+      /* width:9.6rem; */
+      text-align: center;
+      /* top:4.5rem;
+      left:4rem; */
     }
     .tishi2 .xiaoshouer{
       width:1rem;
       height: auto;
+      display: inline-block;
     }
     .tishi2 .tishidongzuo{
-      position: absolute;
-      right:0rem;
+      /* position: absolute;
+      right:0rem; */
       font-size: 0.35rem;
       color: #F3A940;
-      display: inline-block;
-      margin-left: 1rem;
+      /* display: inline-block; */
+      margin-left: 0.5rem;
     }
     .part{
        width: 100%;
@@ -96,7 +98,7 @@
     .dragPart{
       width: 100%;
       height: auto;
-      margin: 2rem auto;
+      margin: 1rem auto;
       display: flex;
       justify-content:center;
     }
@@ -308,12 +310,12 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index10/renwu.png" class="renwu" />
+      <image src="images/index10/renwu.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
       <div class="part">
-        <h6>将各个组件归入正确的类别</h6>
-        <div class="imgPart">
+        <h6 class="animated c1 bounceInLeft delay-300ms">将各个组件归入正确的类别</h6>
+        <div class="imgPart animated c1 bounceInRight delay-500ms">
           <span class="gaoyadianchi">高压电池</span>
           <span class="zuoyijiare">座椅加热</span>
           <span class="dianji">电机</span>
@@ -324,15 +326,17 @@
           <span class="ranyoubeng">燃油泵</span>
           <span class="neiqianyibiaopan">内嵌仪表盘</span>
         </div>
-        <div class="dragPart">
+        <div class="animated c1 bounceInLeft delay-1s">
+            <p class="tishi2 animated c4 flash">
+                <img src="images/index10/xiaoshouer.png" class="xiaoshouer">
+                <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
+              </p>
+        </div>
+        <div class="dragPart animated c1 bounceInLeft delay-1s">
           <div class="drag drag1"><p class="area area1"></p><img src="images/index10/tu-1.png"/></div>
           <div class="drag drag2"><p class="area area2"></p><img src="images/index10/tu-2.png"/></div>
         </div>
         <!-- <div class="dragImgPart"></div> -->
-        <p class="tishi2">
-          <img src="images/index10/xiaoshouer.png" class="xiaoshouer">
-          <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
-        </p>
       </div>
     </main>
   </div>
