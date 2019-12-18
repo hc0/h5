@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
+    @font-face{
+     font-family: "siyuan"; 
+     src:url("../fonts/SourceHanSansCN.otf");
+    }
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: siyuan !important;
     }
     html,
     body {
@@ -25,6 +30,7 @@
       height: 100%;
       background: url(images/bg.png) no-repeat;
       background-size:100% auto;
+      border:0.2rem solid #3AB3C5;
     }
     .imgHeader{
       width: 100%;
@@ -40,16 +46,13 @@
     }
     main{
       position: absolute;
-      margin-top: 0.6rem;
+      margin: 0.6rem 1.5rem;
     }
     .title{
-      font-size: 1rem;
-      padding: 0.5rem;
-      padding-bottom: 0.1rem;
+      margin: 0.4rem 0;
     }
     .content{
       font-size: 0.6rem;
-      padding: 0.5rem;
       text-indent: 2em;
     }
     .drawing{
@@ -148,9 +151,9 @@
       <image src="images/index1/dianya.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="title animated c1 bounceInLeft delay-300ms">
+      <h6 class="title animated c1 bounceInLeft delay-300ms">
         电压表示电势差
-      </div>
+      </h6>
       <div class="content animated c1 bounceInLeft delay-300ms">
         电势就好比是一个相对于固定参考面的平面。如果将电势比作一栋大楼,以地面为参考平面，则一楼就是零电势。二楼就是比之前更高的一个电势。电压和电势指的谁都是伏特。在下图示例中，电压U示电势2减电势1的结果。因此，电压源始终有两个触点或电极。通常将其称为正极和负极。移动电势的调节滑块并观察对电压的影响。
       </div>
