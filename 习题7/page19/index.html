@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>无设计稿rem</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
@@ -33,7 +34,7 @@
       width: 100%;
       height: 4rem;
     }
-    .title{
+    #animate{
       position: absolute;
       margin-top: 1.75rem;
       width: 13.5rem;
@@ -56,7 +57,7 @@
       justify-content:center;
     }
     .imgPart p{
-      width: 9rem;
+      width: 10rem;
       height: 1rem;
       margin:0.2rem;
       padding:0.1rem 0.2rem;
@@ -78,8 +79,9 @@
        width: 2.8rem;
     }
     .tishi2{
-      position: absolute;
-      width:9.6rem;
+      /* position: absolute; */
+      /* width:9.6rem; */
+      text-align: center;
       top:5.8rem;
       left:4rem;
     }
@@ -88,12 +90,12 @@
       height: auto;
     }
     .tishi2 .tishidongzuo{
-      position: absolute;
-      right:0rem;
+      /* position: absolute;
+      right:0rem; */
       font-size: 0.35rem;
       color: #F3A940;
-      display: inline-block;
-      margin-left: 1rem;
+      /* display: inline-block; */
+      margin-left: 0.5rem;
     }
     .part{
        width: 100%;
@@ -101,7 +103,7 @@
     .dragPart{
       width: 100%;
       height: auto;
-      margin: 2rem auto;
+      margin: 1rem auto;
       display: flex;
       justify-content:center;
     }
@@ -317,26 +319,28 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index11/title.png" class="title" />
+      <image src="images/index11/title.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
       <div class="part">
-        <h6>在混合动力汽车上进行以下作业最低需要什么资质?</h6>
-        <div class="imgPart">
+        <h6 class="animated c1 bounceInLeft delay-300ms">在混合动力汽车上进行以下作业最低需要什么资质?</h6>
+        <div class="imgPart animated c1 bounceInLeft delay-300ms">
           <p class="eip">已接受电气知识培训的人员(EIP)</p>
           <p class="hve">高压电气专业人员(HVE)</p>
           <p class="hvt">高压电气技术人员(HVT)</p>
         </div>
-        <div class="dragPart">
+        <div class="animated c1 bounceInRight delay-500ms">
+            <p class="tishi2 animated c4 flash">
+                <img src="images/index11/xiaoshouer.png" class="xiaoshouer">
+                <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
+              </p>
+        </div>
+        <div class="dragPart animated c1 bounceInRight delay-1s">
           <div class="drag drag1"><p class="area area1"></p></div>
           <div class="drag drag2"><p class="area area2"></p></div>
           <div class="drag drag3"><p class="area area3"></p></div>
         </div>
         <!-- <div class="dragImgPart"></div> -->
-        <p class="tishi2">
-          <img src="images/index11/xiaoshouer.png" class="xiaoshouer">
-          <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
-        </p>
       </div>
     </main>
   </div>
