@@ -103,18 +103,18 @@
 <body>
   <div class="outer" style="overflow-y: auto;">
     <div class="imgHeader">
-      <img src="images/tlt19.png" class="dianya" />
+      <img src="images/tlt19.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="content">
+      <div class="content animated c1 bounceInLeft delay-300ms">
       	选出高压汽车上使用的标志和提示
       </div>
-      <div class="drawing">
+      <div class="drawing  animated c1 bounceInRight delay-500ms">
         <div class="ditu">
           <img class="pic" src="images/ditu19.png">
         </div>
       </div>
-      <div class="iconBox clear">
+      <div class="iconBox clear animated c1 bounceInLeft delay-1s">
       	<div class="fl leftBox">
       		<ul>
       			<li class="icon icon1" onclick="addNum(1)" data-type="0"><img src="images/icon1.png"></li>
@@ -124,7 +124,7 @@
       			<li class="icon icon5" onclick="addNum(5)" data-type="0"><img src="images/icon5.png"></li>		      			
       		</ul>
       	</div>
-      	<div class="fl centerBox">
+      	<div class="fl centerBox animated c4 flash">
         	<img src="images/xiaoshou.png" />
         	<span>点击元件显示名称</span>
       	</div>
@@ -138,7 +138,7 @@
       		</ul>
       	</div>
       </div>
-      <div class="btnGroup">
+      <div class="btnGroup animated c1 bounceInRight delay-1500ms">
       	<span class="button" id="button1">检查</span>
       	<span class="button" id="button2">答案</span>
       </div>
@@ -197,6 +197,8 @@
     		  	$(item).removeClass("addColor");
     		  }
         });
+       // 给答案重新赋值正确数组
+       allArr = ["2","3","4","5","7","9","10"];
     });
   });
 </script>

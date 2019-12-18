@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>无设计稿rem</title>
+  <title>练习</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
@@ -36,7 +37,7 @@
       height: 4rem;
     }
 
-    .lianxi {
+    #animate {
       position: absolute;
       margin-top: 1.75rem;
       width: 13.5rem;
@@ -116,9 +117,9 @@
     }
     .tishi2 {
       position: absolute;
-      width: 5.6rem;
-      top: 4rem;
-      right: 1rem;
+      width: 10.6rem;
+      top: 2rem;
+      right: 2rem;
     }
 
     .tishi2 .xiaoshouer {
@@ -180,21 +181,23 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index8/lianxi.png" class="lianxi" />
+      <image src="images/index8/lianxi.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
       <div class="part">
-        <h6>谁应该做什么？将人员与其工作相匹配。</h6>
-        <div class="imgPart">
-          <img src="images/index8/hve.png" class="hve">
-          <img src="images/index8/hvt.png" class="hvt">
-          <img src="images/index8/eip.png" class="eip">
+        <h6 class="animated c1 bounceInLeft delay-300ms">谁应该做什么？将人员与其工作相匹配。</h6>
+        <div class="animated c1 bounceInRight delay-500ms">
+            <div class="imgPart">
+                <img src="images/index8/hve.png" class="hve">
+                <img src="images/index8/hvt.png" class="hvt">
+                <img src="images/index8/eip.png" class="eip">
+              </div>
+              <p class="tishi2 animated c4 flash">
+                <img src="images/index8/xiaoshouer.png" class="xiaoshouer">
+                <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
+              </p>
         </div>
-        <p class="tishi2">
-          <img src="images/index8/xiaoshouer.png" class="xiaoshouer">
-          <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
-        </p>
-        <div class="dragPart">
+        <div class="dragPart animated c1 bounceInLeft delay-1s">
           <div class="drag drag_flex">
             <img src="images/index8/jiantou.png" class="jiantou"/>
             <p class="wenziarea">车辆进入维修站</p>
@@ -244,7 +247,7 @@
             <p class="wenziarea wenziarea_drag">断开高压装置供电 使之安全并拆卸高压蓄电池</p>
           </div>
         </div>
-        <div class="BtnPart">
+        <div class="BtnPart animated c1 bounceInRight delay-1500ms">
           <a href="javascript:void(0);" onclick="checkFn()"><img src="images/index8/jiancha.png"></a>
           <a href="javascript:void(0);" onclick="solutionFn()"><img src="images/index8/daan.png"></a>
         </div>

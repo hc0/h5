@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>无设计稿rem</title>
+  <title>解答下列习题</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maixmum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/animate.min.css"></link>
   <style>
     * {
       margin: 0;
@@ -33,7 +34,7 @@
       width: 100%;
       height: 4rem;
     }
-    .jieda{
+    #animate{
       position: absolute;
       margin-top: 1.75rem;
       width: 13.5rem;
@@ -90,7 +91,7 @@
       width:1rem;
       height: auto;
       transition: all 0.5s ease 0s;
-      animation: donghua 1s 3 0s forwards;
+      /* animation: donghua 1s 3 0s forwards; */
     }
     @keyframes donghua {    
       from {
@@ -217,48 +218,52 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <image src="images/index6/jieda.png" class="jieda" />
+      <image src="images/index6/jieda.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-      <div class="part part1">
-        <h6>一、将调节滑块置于在汽车中属于危险电压的直流电压限值</h6>
-        <p>现在看到的这个电压值是<span class="dianyajieguo"> 0 </span>V</p>
-        <p class="range">
-          <span class="kuai"><span>
-        </p>
-        <p class="tishi">
-          <img src="images/index6/xiaoshouer.png" class="xiaoshouer">
-          <span class="tishidongzuo">拖动滑块</span>
-        </p>
-        <div class="BtnPart">
-          <a href="javascript:void(0);" onclick="checkFn1()"><img src="images/index6/jiancha.png" class="jiancha"></a>
-          <a href="javascript:void(0);" onclick="solutionFn1()"><img src="images/index6/daan.png" class="daan"></a>
-        </div>
+      <div class="animated c1 bounceInLeft delay-500ms">
+          <div class="part part1">
+              <h6>一、将调节滑块置于在汽车中属于危险电压的直流电压限值</h6>
+              <p>现在看到的这个电压值是<span class="dianyajieguo"> 0 </span>V</p>
+              <p class="range">
+                <span class="kuai"><span>
+              </p>
+              <p class="tishi animated c4 flash">
+                <img src="images/index6/xiaoshouer.png" class="xiaoshouer">
+                <span class="tishidongzuo">拖动滑块</span>
+              </p>
+              <div class="BtnPart">
+                <a href="javascript:void(0);" onclick="checkFn1()"><img src="images/index6/jiancha.png" class="jiancha"></a>
+                <a href="javascript:void(0);" onclick="solutionFn1()"><img src="images/index6/daan.png" class="daan"></a>
+              </div>
+            </div>
       </div>
-      <div class="part part2">
-        <h6>二、将下列电源与正确的电压值相匹配</h6>
-        <div class="imgPart">
-          <img src="images/index6/dianchi.png" class="dianchi">
-          <img src="images/index6/dianping.png" class="dianping">
-          <img src="images/index6/dianyuan.png" class="dianyuan">
-          <img src="images/index6/xiaoche.png" class="xiaoche">
-        </div>
-        <div class="dragPart">
-          <div class="drag drag1"><p class="area area1"></p></div>
-          <div class="drag drag2"><p class="area area2"></p></div>
-          <div class="drag drag3"><p class="area area3"></p></div>
-          <div class="drag drag4"><p class="area area4"></p></div>
-        </div>
-        <!-- <div class="dragImgPart"></div> -->
-        <p class="tishi2">
-          <img src="images/index6/xiaoshouer.png" class="xiaoshouer">
-          <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
-        </p>
-        <div class="BtnPart">
-          <a href="javascript:void(0);" onclick="checkFn()"><img src="images/index6/jiancha.png"></a>
-          <a href="javascript:void(0);" onclick="solutionFn()"><img src="images/index6/daan.png"></a>
-        </div>
-        
+      <div class="animated c1 bounceInRight delay-1s">
+          <div class="part part2">
+              <h6>二、将下列电源与正确的电压值相匹配</h6>
+              <div class="imgPart">
+                <img src="images/index6/dianchi.png" class="dianchi">
+                <img src="images/index6/dianping.png" class="dianping">
+                <img src="images/index6/dianyuan.png" class="dianyuan">
+                <img src="images/index6/xiaoche.png" class="xiaoche">
+              </div>
+              <div class="dragPart">
+                <div class="drag drag1"><p class="area area1"></p></div>
+                <div class="drag drag2"><p class="area area2"></p></div>
+                <div class="drag drag3"><p class="area area3"></p></div>
+                <div class="drag drag4"><p class="area area4"></p></div>
+              </div>
+              <!-- <div class="dragImgPart"></div> -->
+              <p class="tishi2 animated c4 flash">
+                <img src="images/index6/xiaoshouer.png" class="xiaoshouer">
+                <span class="tishidongzuo">拖动选项使之与正确的答案匹配</span>
+              </p>
+              <div class="BtnPart">
+                <a href="javascript:void(0);" onclick="checkFn()"><img src="images/index6/jiancha.png"></a>
+                <a href="javascript:void(0);" onclick="solutionFn()"><img src="images/index6/daan.png"></a>
+              </div>
+              
+            </div>
       </div>
     </main>
   </div>
