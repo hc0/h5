@@ -10,7 +10,6 @@
     height: 100%;
     font-family:Helvetica;
     padding: 1.6rem 0;
-    overflow-y: auto;
   }
   .outer{
     position: relative;
@@ -23,6 +22,7 @@
     border-color: #3AB3C5;
     border-width: 0.2rem;
     border-style: solid;
+    overflow-y: auto;
   }
   .imgHeader{
     width: 100%;
