@@ -55,25 +55,29 @@
 <body>
   <div class="outer">
     <div class="imgHeader">
-      <img src="images/tlt11.png" class="dianya" />
+      <img src="images/tlt11.png" id="animate" class="animated c1 fadeInDown" />
     </div>
     <main>
-        <div class="content">                      
+        <div class="content animated c1 bounceInLeft delay-300ms">                      
             <p style="margin-bottom: 0.5rem">对于某些操作来说,必须关闭高压系统。关闭高压系统有一套固定程序,必须由高压电气技术人员(HVT)或高压电气专业人员(HVE)</p>
             <p>大众汽车的售后服务文件中对于何时需要由专业人员关闭电源有相关说明。</p>
         </div>
-        <div class="title">电力驱动工作模式</div>
-        <form action="" class="inputDiv">
-            <input type="checkbox" name="vehicle" value="1">已接受电气知识培训的人员 (EIP)<br>
-            <input type="checkbox" name="vehicle" value="2">高压电气技术人员 (HVT)<br>
-            <input type="checkbox" name="vehicle" value="3">高压电气专业人员 (HVE)
-        </form>
-        <div class="sureButton">
-            <img src="images/gxbutton.png" id="gxButton">
-            <img src="images/sure.png" class="sure" style="display: none">
-            <img src="images/error.png" class="error" style="display: none">
+        <div class="animated c1 bounceInRight delay-500ms">
+            <div class="title">电力驱动工作模式</div>
+            <form action="" class="inputDiv">
+                <input type="checkbox" name="vehicle" value="1">已接受电气知识培训的人员 (EIP)<br>
+                <input type="checkbox" name="vehicle" value="2">高压电气技术人员 (HVT)<br>
+                <input type="checkbox" name="vehicle" value="3">高压电气专业人员 (HVE)
+            </form>
+            <div class="sureButton">
+                <img src="images/gxbutton.png" id="gxButton">
+                <img src="images/sure.png" class="sure" style="display: none">
+                <img src="images/error.png" class="error" style="display: none">
+            </div>
         </div>
-        <img src="images/shandian.png" class="shandian">
+        <div class="animated c1 bounceInLeft delay-1s">
+            <img src="images/shandian.png" class="shandian">
+        </div>
     </main>
   </div>
 </body>
