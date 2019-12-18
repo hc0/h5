@@ -7,12 +7,45 @@
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <link rel="stylesheet" href="css/style.css"></link>
   <style>
+    @font-face{
+      font-family: "siyuan"; 
+      src:url("../fonts/SourceHanSansCN.otf");
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: siyuan !important;
+    }
+    html,
+    body {
+      background-color:#93D9F6;
+      width: 100%;
+      height: 100%;
+      padding: 1.6rem 0;
+    }
+    .outer{
+      position: relative;
+      width: 17.5rem;
+      margin:0 auto;
+      min-height: 100%;
+      box-sizing: border-box;
+      background: url(images/bg.png) #ffffff no-repeat;
+      background-size:100% auto;
+      border-color: #3AB3C5;
+      border-width: 0.2rem;
+      border-style: solid;
+      overflow-y: auto;
+    }
+    .title{
+      margin: 0.4rem 0;
+    }
     #animate{
       margin-top: 1.5rem
     }
     .drawing{
       position: relative;
-      margin-top: 0.3rem;
+      margin-top: 1rem;
       width: 13.6rem;
       height: 13.6rem;
       background: url("images/kuaibai.png") no-repeat;
@@ -45,10 +78,10 @@
     	<img src="images/tlt4.png" id="animate" class="animated c1 fadeInDown"/>
     </div>
     <main>
-      <div class="title animated c1 bounceInLeft delay-300ms">
+      <h6 class="title animated c1 bounceInLeft delay-300ms">
        “高压保护”分离插头
-      </div>
-      <div class="content animated c1 bounceInLeft delay-500ms" style="margin: 1rem 0;">
+      </h6>
+      <div class="content animated c1 bounceInLeft delay-500ms">
         <p>另一种切断车辆供电的方法是使用分离插头。区分高压和低压分离插头。
         	压分离插头以物理方式断开纵联线路以及两部分蓄电池的高压连接。低压分离插头仅断开纵联线路并促使‘高压保护”开启。
         </p>

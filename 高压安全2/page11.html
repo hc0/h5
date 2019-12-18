@@ -7,6 +7,39 @@
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <link rel="stylesheet" href="css/style.css"></link>
   <style>
+     @font-face{
+      font-family: "siyuan"; 
+      src:url("../fonts/SourceHanSansCN.otf");
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: siyuan !important;
+    }
+    html,
+    body {
+      background-color:#93D9F6;
+      width: 100%;
+      height: 100%;
+      padding: 1.6rem 0;
+    }
+    .outer{
+      position: relative;
+      width: 17.5rem;
+      margin:0 auto;
+      min-height: 100%;
+      box-sizing: border-box;
+      background: url(images/bg.png) #ffffff no-repeat;
+      background-size:100% auto;
+      border-color: #3AB3C5;
+      border-width: 0.2rem;
+      border-style: solid;
+      overflow-y: auto;
+    }
+    .title{
+      margin: 0.4rem 0;
+    }
     .drawing{
       position: relative;
       margin-top: 0.6rem;
@@ -54,9 +87,9 @@
       <image src="images/duandian0.png" id="animate"  class="animated c1 fadeInDown"/>
     </div>
     <main>
-      <div class="title animated c1 bounceInLeft delay-300ms">
+      <h6 class="title animated c1 bounceInLeft delay-300ms">
         BMS对“高压保护”进行控制
-      </div>
+      </h6>
       <div class="content animated c1 bounceInLeft delay-500ms">
         高压蓄电池的电压并不一直施加到车内其他高压组件上。可以通过所谓的“高压保护”断开或闭合电路。这些“高压保护”类似一个开关。当它们打开时，高压蓄电池之外不存在电压,也没有电流流过。它们通过汽车的12V蓄电池驱动。只有当存在12V电压并且点火开关打开时,“高压保护”才会关闭。蓄电池管理系统(BMS) 对“高压保护”进行控制。
       </div>
