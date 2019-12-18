@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="css/animate.min.css"></link>
   <link rel="stylesheet" href="css/style.css"></link>
   <style>
+    @font-face{
+      font-family: "siyuan"; 
+      src:url("../fonts/SourceHanSansCN.otf");
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: siyuan !important;
+    }
     .title{
       padding: 0.5rem 2rem 0.1rem 1.6rem;
       font-size: 0.6rem;
@@ -34,7 +44,19 @@
     }
     .width50{
       display: inline-block;
-      width: 48%;
+      width: 45%;
+      padding-left: 6%;
+      box-sizing: border-box;
+    }
+    .width42{
+      width: 42%;
+      display: inline-block;
+      padding-left: 6%;
+      box-sizing: border-box;
+    }
+    .width55{
+      width: 55%;
+      display: inline-block;
       padding-left: 6%;
       box-sizing: border-box;
     }
@@ -84,9 +106,9 @@
        <div class="animated c1 bounceInRight delay-500ms">
           <div class="title">二、由哪个组件为12V车载电池充电？？</div>
           <form action="" class="inputDiv">
-              <span class="width50"><input type="checkbox" name="two" value="1">交流发电机 </span>
-              <span class="width50"><input type="checkbox" name="two" value="2">没有12V车载电池 </span>
-              <span class="width100"><input type="checkbox" name="two" value="3">动力电子电路 </span>
+              <span class="width42 "><input type="checkbox" name="two" value="1">交流发电机 </span>
+              <span class="width55"><input type="checkbox" name="two" value="2">没有12V车载电池 </span>
+              <span class="width50"><input type="checkbox" name="two" value="3">动力电子电路 </span>
           </form>
           <div class="sureButton">
               <span class="checkButton" id="checkOne2">提交</span>
