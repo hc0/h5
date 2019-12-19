@@ -82,7 +82,7 @@
       position: absolute;
       width: 0.6rem;
       top:1.4rem;
-      right:2.5rem;
+      right:3.5rem;
     }
     .danwei{
       width:11rem;
@@ -128,6 +128,12 @@
       top:2rem;
       left:9.4rem;
     }
+    .uClass{
+      position: absolute;
+      top:2rem;
+      left: 8.4rem;
+      font-size: 0.4rem;
+    }
     .range1::before,.range2::before{
       content:"0V";
       left:0rem;
@@ -145,7 +151,7 @@
       width:2rem;
       height: auto;
       position: absolute;
-      top:-0.5rem;
+      top:-0.8rem;
       left:3.6rem;
     }
   </style>
@@ -169,13 +175,13 @@
           <span class="num num1">0 V</span>
           <span class="num num2">0 V</span>
           <img src="images/index1/jiantou.png" class="jiantou" />
-          <span class="num num3">0 V</span>
+          <span class="uClass">U=</span><span class="num num3">0 V</span>
           <p class="range range1">
-            <img src="images/index1/dianshi1.png" class="dianshi1" />
+            <img src="images/index1/dianshi2.png" class="dianshi1" />
             <span class="kuai kuai1"><span>
           </p>
           <p class="range range2">
-            <img src="images/index1/dianshi2.png" class="dianshi2" />
+            <img src="images/index1/dianshi1.png" class="dianshi2" />
             <span class="kuai kuai2"><span>
           </p>
         </div>
@@ -195,6 +201,8 @@
   }
   getRem();
   $(function(){
+    var number1 = 0;
+    var number2 = 0;
     // 功能滑块
      $(".kuai1").draggable({
       containment: ".range1",
@@ -204,7 +212,8 @@
         console.log(ui.position.left);
         var item = $(".range1").width() / 11;  
         $(".num1").text(parseInt(ui.position.left / item)+" V");
-        $(".num3").text(parseInt(ui.position.left / item) + " V");
+        number1 = parseInt(ui.position.left / item);
+        $(".num3").text((number1 - number2) + " V");
       },
     });
     $(".kuai2").draggable({
@@ -214,8 +223,10 @@
       drag: function (event, ui) {
         console.log(ui.position.left);
         var item = $(".range1").width() / 11;
-        $(".num2").text(parseInt(ui.position.left / item) * -1 + " V");
-        $(".num3").text(10 - parseInt(ui.position.left / item)  + " V");
+        $(".num2").text(parseInt(ui.position.left / item) * 1 + " V");
+        number2 = parseInt(ui.position.left / item);
+        $(".num3").text((number1 - number2) + " V");
+        // $(".num3").text(10 - parseInt(ui.position.left / item)  + " V");
       },
     });
     // 模块飞入
