@@ -157,12 +157,15 @@
       top:1.4rem;
       right:2.5rem;
     }
-    .deng{
+    .deng,.deng2{
       position: absolute;
       width: 1.5rem;
       height: auto;
       top:6rem;
       right:0.8rem;
+    }
+    .deng2{
+      z-index: 100;
     }
     .dengbg{
       position: absolute;
@@ -174,12 +177,20 @@
       background-color: #e6f8ff;
       opacity:0;
     }
-    .fangxiang{
+    .fangxiang,.fangxiang1{
       position: absolute;
       width: 2.25rem;
       height: auto;
       top:9.1rem;
       right:4.2rem;
+    }
+    .fangxiang1{
+      position: absolute;
+      width: 2rem;
+      height: auto;
+      top: 9.27rem;
+      right: 4.4rem;
+      display: none;
     }
     .fangxiangbg{
       position: absolute;
@@ -188,7 +199,7 @@
       height: 0.32rem;
       top:9.4rem;
       left:4.8rem;
-      background-color: #c00;
+      background-color: #fc0d1b;
     }
   </style>
 </head>
@@ -219,8 +230,10 @@
             <span class="num num1">9 V</span>
             <span class="num num2">0 V</span>
             <img src="images/index2/X.png" class="deng" />
+            <img src="images/index2/deng2.jpg" class="deng2" />
             <span class="dengbg"></span>
             <img src="images/index2/fangxiang.png" class="fangxiang" />
+            <img src="images/index2/fangxiang1.png" class="fangxiang1" />
             <span class="fangxiangbg"></span>
             <img src="images/index2/danwei.png" class="danwei" />
           </div>
@@ -262,13 +275,16 @@
           $(".kuang1").attr("src","images/index2/kuang2.png").css({
             "top": "4.2rem"
           });
+          $(".fangxiang1").show();
           $(".dengbg").css({ "opacity": dengbgOp });
           $(".fangxiangbg").css({ "width": fangxiangbgW });
-          
+          $(".deng2").hide();
         }else{
           $(".kuang1").attr("src", "images/index2/kuang1.png").css({
             "top": "3.5rem"
           });
+          $(".deng2").show();
+          $(".fangxiang1").hide();
           $(".dengbg").css({ "opacity": 1 });
           $(".fangxiangbg").css({ "width": 0 });
         }
@@ -289,7 +305,16 @@
         $(".dengbg").css({"opacity": dengbgOp});
         fangxiangbgW = fxW / (parseInt(ui.position.top / item) + 1)
         $(".fangxiangbg").css({"width": fangxiangbgW});
-
+        if(parseInt(ui.position.top / item) == 0){
+          $(".fangxiang1").show();
+        }else{
+          $(".fangxiang1").hide();
+        }
+        if(parseInt(ui.position.top / item) == 8){
+          $(".deng2").show();
+        }else{
+          $(".deng2").hide();
+        }
       },
     });
   })
