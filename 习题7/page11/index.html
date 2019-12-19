@@ -127,11 +127,9 @@
       float: left;
       background-color:rgb(192, 192, 192) ;
       position: relative;
-      animation: shaky-slow 1s ease-in-out 0s 50;
-      animation-play-state:paused;
     }
     .dragPart .drag1.error,.dragPart .drag2.error{
-      animation-play-state:running;
+      animation: shaky-slow 1s ease-in-out 0s 1;
     }
     
     .dragPart .drag::before{
@@ -396,7 +394,7 @@
         $(".drag1").addClass("error");
         setTimeout(() => {
            $(".drag1").removeClass("error");
-        },1000);
+        },1500);
       }
     
     }
@@ -423,7 +421,7 @@
         $(".drag2").addClass("error");
         setTimeout(() => {
           $(".drag2").removeClass("error");
-        }, 1000);
+        }, 1500);
       }
 
     }
