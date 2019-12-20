@@ -154,7 +154,7 @@
     	$("input[name='one']").each(function (index, item) {
     		  var arr = ["1","3","5","8"];
     		  if(arr.includes($(item).val())){
-    		  	$(item).attr("checked", "checked");
+    		  	$(item).prop("checked", true);
     		  } else {
     		  	$(item).prop("checked", false);
     		  }
@@ -190,7 +190,7 @@
         $("input[name='two']").each(function (index, item) {
     		  var arr = ["2","3","8"];
     		  if(arr.includes($(item).val())){
-    		  	$(item).attr("checked", "checked");
+    		  	$(item).prop("checked", true);
     		  } else {
     		  	$(item).prop("checked", false);
     		  }
