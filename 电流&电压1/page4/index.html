@@ -86,26 +86,6 @@
       left:50%;
       margin-left:-1rem;
     }
-    .range1::before{
-      content:"断开";
-      position: absolute;
-      left:-1.6rem;
-      top:-0.4rem;
-      font-size: 0.6rem;
-    }
-    .range1::after{
-      content:"合上";
-      position: absolute;
-      right:-1.6rem;
-      top:-0.4rem;
-      font-size: 0.6rem;
-    }
-    .range1 .kuaiguan{
-      font-size: 0.6rem;
-      position: absolute;
-      margin-left: 0.5rem;
-      top:-1.4rem;
-    }
     .kuai{
       position: absolute;
       top:-0.26rem;
@@ -200,6 +180,63 @@
       left:4.8rem;
       background-color: #fc0d1b;
     }
+    .switchOuter{
+      position: absolute;
+      top:2rem;
+      left:4.6rem;
+    }
+    .switchOuter::before{
+      content:"断开";
+      position: absolute;
+      top:0.35rem;
+      left:-1.4rem;
+      font-size: 0.45rem;
+    }
+    .switchOuter::after{
+      content:"合上";
+      position: absolute;
+      top:0.35rem;
+      right:-1.6rem;
+      font-size: 0.45rem;
+    }
+    .Switch_Default {
+      position: relative;
+      width: 2rem;
+      height: 0.8rem;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .switchOuter .kaiguan{
+      position: absolute;
+      width:100%;
+      text-align: center;
+      top:-0.5rem;
+      font-size: 0.45rem;
+    }
+    .Switch_Default .SwitchLine {
+      /* background-color: #00c0ff; */
+      background-color: #dadada;
+    }
+    .Switch_Default .SwitchLine {
+      position: absolute;
+      width: 2rem;
+      height: 0.2rem;
+      left: 0.1rem;
+      top: 0.35rem;
+      z-index: 1;
+    }
+    .Switch_Default .SwitchButton {
+      position: absolute;
+      width: 0.8rem;
+      height: 0.8rem;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      background-color: #dadada;
+      border-radius: 0.8rem;
+      transition: all 0.5s ease 0s;
+  }
   </style>
 </head>
 
@@ -217,10 +254,13 @@
             如果用一个导电材料连接两个不同的电势，则会产生电流。操作电路中的开关，使电路闭合。电压越大，电流越高。电流的表示符号是I,单位是安培。通过调节滑块可以改变电池电压并看到对用电器的影响;
           </div>
           <div class="drawing  animated c1 bounceInRight delay-1s">
-            <p class="range range1">
-              <span class="kuaiguan">开关</span>
-              <span class="kuai kuai1"><span>
-            </p>
+            <div class="switchOuter">
+              <span class="kaiguan">开关</span>
+              <input type="checkbox" class="c1" checked="" style="display: none;">
+              <div class="Switch Switch_Default" id="Switch3">
+                <div class="SwitchLine"></div><span class="SwitchButton"></span>
+              </div>
+            </div>
             <p class="range range2">
               <span class="kuai kuai2"><span>
             </p>
@@ -261,36 +301,40 @@
     }
   })();
   $(function(){
-     $(".kuai1").draggable({
-      containment: ".range1",
-      scroll: false,
-      axis: "x",
-      grid:[$(".range1").width()- $(".kuai1").width()],
-      drag: function(event, ui){
-        
-      },
-      stop:function(){
-        if(!temp){
-          $(".kuang1").attr("src","images/index2/kuang2.png").css({
-            "top": "4.2rem"
-          });
-          $(".fangxiang1").show();
-          $(".dengbg").css({ "opacity": dengbgOp });
-          $(".fangxiangbg").css({ "width": fangxiangbgW });
-          $(".deng2").hide();
-        }else{
-          $(".kuang1").attr("src", "images/index2/kuang1.png").css({
-            "top": "3.5rem"
-          });
-          $(".deng2").show();
-          $(".fangxiang1").hide();
-          $(".dengbg").css({ "opacity": 1 });
-          $(".fangxiangbg").css({ "width": 0 });
-        }
-        temp = !temp;
+    $(".switchOuter").click(function(){
+      temp = !temp;
+      $(".c1").prop("checked", temp);
+      if(temp){
+        $(".SwitchLine,.SwitchButton").css({
+          "backgroundColor":"#00c0ff"
+        });
+        $(".SwitchButton").css({
+          "transform":"translateX(1.3rem)"
+        })
+        $(".kuang1").attr("src", "images/index2/kuang2.png").css({
+          "top": "4.2rem"
+        });
+        $(".fangxiang1").show();
+        $(".dengbg").css({ "opacity": dengbgOp });
+        $(".fangxiangbg").css({ "width": fangxiangbgW });
+        $(".deng2").hide();
+      }else{
+        $(".SwitchButton, .SwitchLine").css({
+          "backgroundColor": "#dadada"
+        })
+         $(".SwitchButton").css({
+          "transform": "translateX(0rem)"
+        })
+        $(".kuang1").attr("src", "images/index2/kuang1.png").css({
+          "top": "3.5rem"
+        });
+        $(".deng2").show();
+        $(".fangxiang1").hide();
+        $(".dengbg").css({ "opacity": 1 });
+        $(".fangxiangbg").css({ "width": 0 });
       }
     });
-    
+
     $(".kuai2").draggable({
       containment: ".range2",
       scroll: false,
