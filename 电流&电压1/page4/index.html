@@ -297,24 +297,29 @@
       scroll: false,
       axis: "y",
       drag: function (event, ui) {
-        if(!temp) return;
+        
         var item = $(".range2").height() / 10;
-        var item1 = $(".fangxiangbg").width() /10;   
-        $(".num1").text(9 - parseInt(ui.position.top / item) + " V");
-        dengbgOp = 0.1 * parseInt(ui.position.top / item) + 0.1;
-        $(".dengbg").css({"opacity": dengbgOp});
-        fangxiangbgW = fxW / (parseInt(ui.position.top / item) + 1)
-        $(".fangxiangbg").css({"width": fangxiangbgW});
-        if(parseInt(ui.position.top / item) == 0){
-          $(".fangxiang1").show();
+        var item1 = $(".fangxiangbg").width() /10;  
+        if (!temp) {
+          $(".num1").text(9 - parseInt(ui.position.top / item) + " V");
         }else{
-          $(".fangxiang1").hide();
-        }
-        if(parseInt(ui.position.top / item) == 8){
-          $(".deng2").show();
-        }else{
-          $(".deng2").hide();
-        }
+          $(".num1").text(9 - parseInt(ui.position.top / item) + " V");
+          dengbgOp = 0.1 * parseInt(ui.position.top / item) + 0.1;
+          $(".dengbg").css({ "opacity": dengbgOp });
+          fangxiangbgW = fxW / (parseInt(ui.position.top / item) + 1)
+          $(".fangxiangbg").css({ "width": fangxiangbgW });
+          if (parseInt(ui.position.top / item) == 0) {
+            $(".fangxiang1").show();
+          } else {
+            $(".fangxiang1").hide();
+          }
+          if (parseInt(ui.position.top / item) == 8) {
+            $(".deng2").show();
+          } else {
+            $(".deng2").hide();
+          }
+        } 
+        
       },
     });
   })
