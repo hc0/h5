@@ -145,10 +145,10 @@
     .dragPart .drag {
       position: relative;
       width:4.5rem;
-      height: 5rem;
       background-color: #F4F6F5;
       float: left;
       margin: 0.2rem;
+      padding:0.3rem 0rem;
     }
     .dragPart .drag_flex{
       display: flex;
@@ -175,9 +175,7 @@
       overflow: hidden;
     }
     .dragPart .drag_area{
-      height: 8rem;
-      padding: 0.5rem;
-      /* overflow: hidden; */
+      padding: 0.6rem 0.5rem;
     }
     .dragPart .drag .wenziarea_drag{
       width:100%;
@@ -280,6 +278,31 @@
     document.documentElement.style.fontSize = document.documentElement.offsetWidth / 20 + 'px';
   }
   getRem();
+  (function(){
+    var dragH0 = $(".drag:eq(0)").height();
+    var dragH1 = $(".drag:eq(1)").height();
+    var dragH2 = $(".drag:eq(2)").height();
+    var line1 = Math.max(dragH0, dragH1, dragH2);
+    $(".drag:eq(0),.drag:eq(1),.drag:eq(2)").height(line1);
+
+    var dragH3 = $(".drag:eq(3)").height();
+    var dragH4 = $(".drag:eq(4)").height();
+    var dragH5 = $(".drag:eq(5)").height();
+    var line2 = Math.max(dragH3, dragH4, dragH5);
+    $(".drag:eq(3),.drag:eq(4),.drag:eq(5)").height(line2);
+
+    var dragH6 = $(".drag:eq(6)").height();
+    var dragH7 = $(".drag:eq(7)").height();
+    var dragH8 = $(".drag:eq(8)").height();
+    var line3 = Math.max(dragH6, dragH7, dragH8);
+    $(".drag:eq(6),.drag:eq(7),.drag:eq(8)").height(line3);
+
+    var dragH9 = $(".drag:eq(9)").height();
+    var dragH10 = $(".drag:eq(10)").height();
+    var dragH11 = $(".drag:eq(11)").height();
+    var line4 = Math.max(dragH9, dragH10, dragH11);
+    $(".drag:eq(9),.drag:eq(10),.drag:eq(11)").height(line4);
+  })();
   new Sortable(document.querySelector(".imgPart"), {
     group: {
       name: 'shared',
