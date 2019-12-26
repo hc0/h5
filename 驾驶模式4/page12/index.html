@@ -64,6 +64,10 @@
       font-size: 0.45rem;
       color:#333333;
     }
+    .textarea{
+      overflow-y: scroll;
+      height: 2.7rem;
+    }
     .part1 h6{
       margin-top: 0.45rem;
     }
@@ -711,7 +715,7 @@
         <p>
           选择任意一个档位 (优先选择R、D或B档)，点击油门踏板并观察图示动画的反应。点击图片上方的加号键，了解详细信息。
         </p>
-        <p>
+        <p class="textarea">
           根据已有知识，BEV 车辆的空调和加热装置也需要利用縞压蓄电池中的电能。空调系统的运行请点击互动图示查看。请操作具体的操作元件，并观察所产生的变化。
         </p>
       </div>
@@ -843,6 +847,7 @@
           $(".part3").removeClass("jiasu");
           $(".part3").removeClass("zhidong");
           $(".part3").removeClass("zhidongplus");
+          $(".textarea").text("根据已有知识，BEV车辆的空调和加热装置也需要利用高压蓄电池中的电能。空调系统的运行请点击互动图示查看。请操作具体的操作元件,并观察所产生的变化")
         } else if (num == 3) {
           isstop = false;
           isjiasu = false;
@@ -855,6 +860,7 @@
           $(".part2").removeClass("verySlow");
           $(".part3").removeClass("jiasu");
           $(".part3").removeClass("zhidongplus");
+          $(".textarea").text('在进行制动能量回收时，电动机作为发电机运行,将车辆滑动的动能转换为电能。若在行驶期间(“D"档) 将脚从油门踏板上抬起，则能量回收过程自动开始。此外,若此时轻踏制动踏板，则能量回收相应提高，而重踏制动踏板时则会回收相对较少的能量。');
         } else if (num == 4) {
           isstop = false;
           isjiasu = false;
@@ -867,6 +873,7 @@
           $(".part2").removeClass("slow");
           $(".part3").removeClass("jiasu");
           $(".part3").removeClass("zhidong");
+          $(".textarea").text('在“B”档时会实现最大的能量回收过程，即便该档位在行驶时与“D”档无任何不同。若松开油门踏板，则与发动机制动相同，依据相应的车速和蓄电池充电状态立即开始能量回收。减速过程迅速完成，制动灯自动亮起。也可操作油门踏板或执行换挡过程。请注意车辆在不同状态下的表现以及什么时候达到最大的能量回收状态。')
         }
         $(".part3 .dangwei span").eq(num).css({
           backgroundColor: "rgb(0, 117, 156)",
@@ -886,6 +893,7 @@
       iszhileng = !iszhileng;
     });
     $(".switch_gas_off,.switch_gas_on").click(function(e) {
+      $(".textarea").text("根据已有知识，BEV车辆的空调和加热装置也需要利用高压蓄电池中的电能。空调系统的运行请点击互动图示查看。请操作具体的操作元件,并观察所产生的变化");
       var rem = document.documentElement.offsetWidth / 20
       if (e.offsetX > 0 && e.offsetX <= 1 * rem) {
         isstop = true;
