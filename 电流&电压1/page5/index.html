@@ -96,8 +96,8 @@
       position: absolute;
       top:-0.16rem;
       left:0rem;
-      width:0.6rem;
-      height: 0.4rem;
+      width:1rem;
+      height: 0.6rem;
       background-color:#F3A940;
     }
     .range2{
@@ -108,8 +108,8 @@
       margin-left:-1rem;
     }
     .kuai2{
-      width: 0.8rem;
-      left:-0.16rem;
+      width: 1rem;
+      left:-0.26rem;
     }
     .num{
       font-size: 0.6rem;
@@ -224,7 +224,7 @@
           <img src="images/index3/xianlu.png" class="xianlu" />
           <img src="images/index3/dianyuan.png" class="dianyuan" />
           <img src="images/index3/dianzu.png" class="dianzu" />
-          <span class="num num1">9 V</span>
+          <span class="num num1">10 V</span>
           <span class="num num2">0 V</span>
           <img src="images/index3/X.png" class="deng" />
           <span class="dengbg"></span>
@@ -259,9 +259,10 @@
       scroll: false,
       axis: "x",
       drag: function(event, ui){
-        var item = $(".range1").width() / 10;
+        var allwidth = $(".range1").width() - $(".kuai1").width();
+        var item = allwidth / 10;
         var item1 = $(".fangxiangbg").width() / 10;
-        $(".num1").text(9 - parseInt(ui.position.top / item) + " V");
+        $(".num1").text(10 - parseInt(ui.position.top / item) + " V");
         dengbgOp = 0.1 * parseInt(ui.position.left / item) + 0.1;
         $(".dengbg").css({ "opacity": dengbgOp });
         fangxiangbgW = fxW / (parseInt(ui.position.left / item) + 1)
@@ -274,9 +275,10 @@
       scroll: false,
       axis: "y",
       drag: function (event, ui) {
-        var item = $(".range2").height() / 10;
+        var allHight = $(".range2").height() - $(".kuai2").height();
+        var item = allHight / 10;
         var item1 = $(".fangxiangbg").width() /10;   
-        $(".num1").text(9 - parseInt(ui.position.top / item) + " V");
+        $(".num1").text(10 - parseInt(ui.position.top / item) + " V");
         dengbgOp = 0.1 * parseInt(ui.position.top / item) + 0.1;
         $(".dengbg").css({"opacity": dengbgOp});
         fangxiangbgW = fxW / (parseInt(ui.position.top / item) + 1)
